@@ -28,7 +28,7 @@ axiosInstance.interceptors.response.use(
 export async function wordseg(text) {
   const data = qs.stringify({ text });
   const response = await axiosInstance.post('/wordseg', data);
-  console.log(JSON.stringify(response.data));
+  // console.log(JSON.stringify(response.data));
   return response.data;
 }
 
@@ -36,6 +36,6 @@ export async function fetchDaily(guess, size = 5) {
   const response = await axiosInstance.get(`/daily`, {
     params: { guess, size },
   });
-  console.log(JSON.stringify(response.data));
+  // console.log(JSON.stringify(response.data));
   return response.data;
 }
